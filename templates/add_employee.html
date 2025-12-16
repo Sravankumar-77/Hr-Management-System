@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+<body>
+    {% block content %}
+    <h2>{{ action }} Employee</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Employee Name:</label>
+        <input type="text" name="username" value="{{ employee.username|default:'' }}" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" value="{{ employee.email|default:'' }}" required><br><br>
+
+        <label>Password:</label>
+       <input type="password" name="password" required><br><br>
+        <label>Confirm Password:</label>
+       <input type="password" name="cpassword" required><br><br>
+        <label>Role:</label>
+       <select name="role" id="">
+        <option value="">---select---</option>
+        <option value="admin">Admin</option>
+        <option value="hr">Hr</option>
+       </select>
+
+
+        <button type="submit">{{ action }} Student</button>
+    </form>
+    {% for message in messages %}
+    <h5 style="color: red;">{{message}}</h5>
+    {% endfor %}
+</body>
+{% endblock %}
+
+</html>

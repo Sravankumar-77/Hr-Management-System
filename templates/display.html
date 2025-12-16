@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>        
+    <h2>Student Details</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Education</th>
+                <th>Course</th>
+                <th>Admissin Date</th>
+                <th>Paid Fee</th>
+                <th>Total Fee</th>
+                {% if request.user.is_superuser %}
+                <th>Update</th>
+                <th>Delete</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in student_data %}
+            <tr>
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.education}}</td>
+                <td>{{student.course}}</td>
+                <td>{{student.admission_date}}</td>
+                <td>{{student.paid_fee}}</td>
+                <td>{{student.total_fee}}</td>
+                {% if request.user.is_superuser %}
+                <td><a href="{% url 'updatestudent' student.id %}">Update</a></td>
+                <td><a href="{% url 'deletestudent' student.id %}">Delete</a></td>
+                <!-- <td>{{student.user_id}}</td> -->
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+{% endblock %}

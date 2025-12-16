@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    
+    <body>
+        <h2>Employee Details</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+
+
+                    {% comment %}
+                    <th>Update</th>
+                    {% endcomment %}
+                   
+                    <th>Delete</th>
+                    
+
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employee_data %}
+                <tr>
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.username}}</td>
+                    <td>{{employee.email}}</td>
+                    
+
+                    {% comment %}
+                    <td><a href="{% url 'updatestudent' student.id %}">Update</a></td>
+                    {% endcomment %}
+                    <td><a href="{% url 'deleteemployee' employee.id %}">Delete</a></td>
+                    <!-- <td>{{student.user_id}}</td> -->
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+    
+    {% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,196 @@
+/* Table color styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f4f8fb;
+    color: #222;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+    padding: 12px 16px;
+    border: 1px solid #d1e0ee;
+    text-align: left;
+}
+
+th {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #eaf1fb;
+}
+
+tr:hover {
+    background: #d6e4f5;
+}
+body{
+/* Sticky navbar styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #11a9cb, #2575fc);
+}
+
+.parent{
+    position: relative;
+    /* display: flex; */
+    justify-content: center;
+    justify-items: center;
+    font-size: 15px;
+    /* margin-bottom: px; */
+    color: black;
+    /* letter-spacing: 1px; */
+}
+    
+.login{
+    position: absolute;
+    border: 4px;
+    /* border-radius: 4px; */
+    /* border-style: solid; */
+    width: 30%;
+    margin-top: 150px;
+    display: inline-flexbox;
+    justify-items: center;
+    align-items: center;
+}
+
+form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color:white;
+    letter-spacing: 1px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+    
+    /* justify-content: center; */
+
+form {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* .btn1{
+    background-color:aqua;
+    border-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 50px;
+
+
+
+} */
+button[type="submit"]{
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+        color: white;
+        border: none;
+        /* padding: 14px ; */
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+        /* Button hover effect */
+ button[type="submit"]:hover {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);   
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: aliceblue;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus{
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.4);
+    }
+
+        form {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 24px 32px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+    
+        form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #333;
+        }
+    
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="number"] {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 7px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+    
+        form button[type="submit"] {
+            width: 100%;
+            padding: 10px 0;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+    
+        form button[type="submit"]:hover {
+            background: #0056b3;
+        }
+    
+        h2 {
+            text-align: center;
+            color: #222;
+            margin-top: 30px;
+            margin-bottom: 20px;   }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+</head>
+
+<body>
+    <div class="parent">
+        <div class="login">
+    <h3>Welcome to Signup page</h3>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>User name:</td>
+                <td><input type="text" name="txtname" id="" placeholder="Enter user name" required></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="email" name="txtemail" id="" placeholder="Enter email" required></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="password" name="pswd" id="" placeholder="Enter password" required></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="password" name="cpswd" id="" placeholder="Confirm password" required></td>
+            </tr>
+            
+        </table>
+        <button type="submit">signup</button>
+
+
+        {% for message in messages %}
+        <h5 style="color: red;">{{message}}</h5>
+        {% endfor %}
+
+    </form>
+    <p>If User exists <a href="{% url 'login' %}">Login</a></p>
+</div>
+</div>
+
+</body>
+
+</html>
